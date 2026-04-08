@@ -1,26 +1,20 @@
-﻿# defychung-max.github.io
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-GitHub Pages personal website scaffold inspired by [sangdon-park.github.io/ko.html](https://sangdon-park.github.io/ko.html).
+# Run and deploy your AI Studio app
 
-## Files
+This contains everything you need to run your app locally.
 
-- `index.html`: redirects to the Korean home page
-- `ko.html` / `en.html`: home pages
-- `projects*.html`: project pages
-- `writing*.html`: writing pages
-- `contact*.html`: contact pages
-- `assets/content.js`: edit this file to replace the current sample text with your real name, project summaries, links, and contact details
-- `assets/site.js`: shared renderer for all pages
-- `assets/styles.css`: shared visual system
+View your app in AI Studio: https://ai.studio/apps/594d649a-27ff-45ae-819b-1b69416ede0a
 
-## Fastest way to customize
+## Run Locally
 
-1. Open `assets/content.js`.
-2. Replace the current sample titles, summaries, and links.
-3. Add your real contact route in the contact page section.
-4. Commit and push to `main`.
+**Prerequisites:**  Node.js
 
-## Notes
 
-- The site is fully static and works on GitHub Pages without a build step.
-- Korean and English pages share the same layout structure for easier maintenance.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
