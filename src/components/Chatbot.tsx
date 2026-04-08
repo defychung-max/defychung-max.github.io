@@ -47,6 +47,12 @@ const Chatbot = () => {
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
       console.error(error);
+      const fallbackText =
+        error instanceof Error
+          ? error.message
+          : 'The chatbot is temporarily unavailable. Please try again later.';
+      const botMessage: Message = { id: (Date.now() + 1).toString(), role: 'bot', text: fallbackText };
+      setMessages(prev => [...prev, botMessage]);
     } finally {
       setIsLoading(false);
     }
